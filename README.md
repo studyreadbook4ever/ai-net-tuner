@@ -1,6 +1,11 @@
 위 프로젝트를 진행하면서 GÉANT Backbone Network traffic matrix 공개 데이터셋으로 모델을 학습시켰고, 리눅스 공식문서로 프롬프트에 넣을 knowledge를 만들었으며 Alibaba의 Qwen3(1.7B)를 사용하였습니다.
 이 코드의 목적은 트래픽을 예측하여, 리눅스 sysctl 설정값을 바꿀 힌트를 slm 기반으로 얻은 뒤에 그걸 사용자가 human in the loop로 수정하는 데에 있습니다.
 
+
+## 0. 라이선스
+
+외부 모델, 외부 데이터셋, llama.cpp는 각자의 라이선스와 이용 조건을 따릅니다. 자세한 출처는 `THIRD_PARTY_NOTICES.md`를 확인합니다.
+
 ## 1. 필수 환경
 
 - Linux
@@ -190,27 +195,3 @@ state/runs/<run_id>/
 - `prompts/`: Qwen에 전달된 prompt
 - `proposals/`: policy 검토가 끝난 proposal artifact
 
-## 7. 압축본 만들기
-
-교수님께 압축본을 보낼 때는 캐시와 실행 로그를 제외합니다.
-
-```bash
-cd /home/baemo_pc/260603
-
-tar \
-  --exclude='.cache' \
-  --exclude='.venv' \
-  --exclude='.git' \
-  --exclude='.agents' \
-  --exclude='.codex' \
-  --exclude='datasets' \
-  --exclude='state' \
-  --exclude='vendor' \
-  --exclude='__pycache__' \
-  --exclude='*.pyc' \
-  -czf ../ai-net-tuner-submission.tar.gz .
-```
-
-## 8. 라이선스
-
-이 저장소의 직접 작성 코드는 MIT License로 공개하는 것을 권장합니다. 외부 모델, 외부 데이터셋, llama.cpp는 각자의 라이선스와 이용 조건을 따릅니다. 자세한 출처는 `THIRD_PARTY_NOTICES.md`를 확인합니다.
