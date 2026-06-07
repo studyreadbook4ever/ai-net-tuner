@@ -1,0 +1,287 @@
+{
+  "managed_file": "/etc/sysctl.d/90-ai-net-tuner.conf",
+  "max_proposals_per_cycle": 2,
+  "default_timeout_seconds": 150,
+  "allow_documented_existing_net_sysctls": true,
+  "permissive_default_risk": "high",
+  "allowed": {
+    "net.core.somaxconn": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.netdev_max_backlog": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.rmem_max": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.wmem_max": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.rmem_default": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.wmem_default": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.core.optmem_max": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_max_syn_backlog": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_fin_timeout": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_keepalive_time": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "low"
+    },
+    "net.ipv4.tcp_keepalive_intvl": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "low"
+    },
+    "net.ipv4.tcp_keepalive_probes": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "low"
+    },
+    "net.ipv4.ip_local_port_range": {
+      "type": "port_range",
+      "min_low": 0,
+      "max_low": 65534,
+      "min_high": 1,
+      "max_high": 65535,
+      "min_low_sysctl": "net.ipv4.ip_unprivileged_port_start",
+      "prefer_different_parity": true,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_rmem": {
+      "type": "int_triplet",
+      "min_each": 0,
+      "max_each": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_wmem": {
+      "type": "int_triplet",
+      "min_each": 0,
+      "max_each": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_tw_reuse": {
+      "type": "enum",
+      "values": ["0", "1", "2"],
+      "risk": "high"
+    },
+    "net.ipv4.tcp_moderate_rcvbuf": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_slow_start_after_idle": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_ecn": {
+      "type": "enum",
+      "values": ["0", "1", "2", "3", "4", "5"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_ecn_fallback": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_max_tw_buckets": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv4.tcp_orphan_retries": {
+      "type": "int",
+      "min": 0,
+      "max": 255,
+      "risk": "high"
+    },
+    "net.ipv4.tcp_no_metrics_save": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_mtu_probing": {
+      "type": "enum",
+      "values": ["0", "1", "2"],
+      "risk": "medium"
+    },
+    "net.ipv4.udp_rmem_min": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.udp_wmem_min": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv4.ip_default_ttl": {
+      "type": "int",
+      "min": 1,
+      "max": 255,
+      "risk": "medium"
+    },
+    "net.ipv4.fib_multipath_hash_policy": {
+      "type": "enum",
+      "values": ["0", "1", "2", "3"],
+      "risk": "high"
+    },
+    "net.ipv4.fib_multipath_hash_fields": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv4.ipfrag_high_thresh": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv4.ipfrag_low_thresh": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv4.ipfrag_time": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv4.ip_unprivileged_port_start": {
+      "type": "int",
+      "min": 0,
+      "max": 65535,
+      "risk": "high"
+    },
+    "net.ipv4.ip_nonlocal_bind": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "high"
+    },
+    "net.ipv4.ip_early_demux": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.tcp_early_demux": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.udp_early_demux": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv4.icmp_ratelimit": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    },
+    "net.ipv6.bindv6only": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv6.flowlabel_consistency": {
+      "type": "enum",
+      "values": ["0", "1"],
+      "risk": "medium"
+    },
+    "net.ipv6.ip6frag_high_thresh": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv6.ip6frag_low_thresh": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "high"
+    },
+    "net.ipv6.icmp.ratelimit": {
+      "type": "int",
+      "min": 0,
+      "max": 2147483647,
+      "risk": "medium"
+    }
+  },
+  "blocked_prefixes": [
+    "kernel.",
+    "fs.",
+    "vm."
+  ],
+  "blocked_globs": [
+    "net.ipv4.conf.*.accept_redirects",
+    "net.ipv4.conf.*.accept_source_route",
+    "net.ipv4.conf.*.bc_forwarding",
+    "net.ipv4.conf.*.disable_policy",
+    "net.ipv4.conf.*.disable_xfrm",
+    "net.ipv4.conf.*.forwarding",
+    "net.ipv4.conf.*.mc_forwarding",
+    "net.ipv4.conf.*.rp_filter",
+    "net.ipv4.conf.*.secure_redirects",
+    "net.ipv4.conf.*.send_redirects",
+    "net.ipv6.conf.*.accept_redirects",
+    "net.ipv6.conf.*.accept_source_route",
+    "net.ipv6.conf.*.disable_ipv6",
+    "net.ipv6.conf.*.forwarding",
+    "net.ipv6.conf.*.stable_secret"
+  ],
+  "blocked_exact": [
+    "net.ipv4.ip_forward",
+    "net.ipv4.tcp_syncookies",
+    "net.ipv4.tcp_abort_on_overflow",
+    "net.ipv4.tcp_congestion_control",
+    "net.ipv4.tcp_fastopen",
+    "net.core.default_qdisc"
+  ]
+}

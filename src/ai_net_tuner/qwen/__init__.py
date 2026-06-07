@@ -1,0 +1,1 @@
+"""Qwen proposal generation layer."""
