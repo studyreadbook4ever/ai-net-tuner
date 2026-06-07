@@ -1,40 +1,6 @@
 위 프로젝트를 진행하면서 GÉANT Backbone Network traffic matrix 공개 데이터셋으로 모델을 학습시켰고, 리눅스 공식문서로 프롬프트에 넣을 knowledge를 만들었으며 Alibaba의 Qwen3(1.7B)를 사용하였습니다.
 이 코드의 목적은 트래픽을 예측하여, 리눅스 sysctl 설정값을 바꿀 힌트를 slm 기반으로 얻은 뒤에 그걸 사용자가 human in the loop로 수정하는 데에 있습니다.
 
-# AI Net Tuner
-
-## 제출 파일 구성
-
-GitHub 또는 압축본에는 아래 파일과 디렉터리를 포함하면 됩니다.
-
-```text
-README.md
-WHITEPAPER.md
-LICENSE
-THIRD_PARTY_NOTICES.md
-pyproject.toml
-uv.lock
-start.sh
-src/
-config/
-data/
-drafts/
-scripts/
-models/traffic_forecaster_geant.npz
-```
-
-아래 항목은 용량이 크거나 실행 중 생성되는 파일이므로 포함하지 않습니다.
-
-```text
-.cache/
-.venv/
-datasets/
-state/
-vendor/
-__pycache__/
-*.pyc
-```
-
 ## 1. 필수 환경
 
 - Linux
